@@ -1,0 +1,114 @@
+@import "tailwindcss";
+
+@theme {
+  --color-pv-green: #2f6b57;
+  --color-pv-deep: #174c45;
+  --color-pv-teal: #1599a8;
+  --color-pv-beige: #e9dcc8;
+  --color-pv-cream: #faf7f0;
+  --color-pv-yellow: #e8b84a;
+  --color-pv-pale: #f7e7a8;
+  --color-pv-text: #263331;
+  --color-pv-muted: #767b78;
+  --color-pv-border: #e3ded4;
+  --font-sans: "Cairo", "Nunito Sans", system-ui, sans-serif;
+  --font-latin: "Nunito Sans", "Cairo", sans-serif;
+  --ease-pv: cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+:root {
+  --pv-radius-card: 20px;
+  --pv-radius-button: 12px;
+  --pv-transition: 220ms cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 96px;
+}
+body {
+  font-family: var(--font-sans);
+  background: var(--color-pv-cream);
+  color: var(--color-pv-text);
+  overflow-x: clip;
+}
+h1, h2, h3, h4 { color: var(--color-pv-deep); font-weight: 700; line-height: 1.35; }
+.ltr { direction: ltr; unicode-bidi: isolate; font-family: var(--font-latin); }
+
+.container-pv { width: 100%; max-width: 1280px; margin-inline: auto; padding-inline: 1.25rem; }
+@media (min-width: 768px) { .container-pv { padding-inline: 2rem; } }
+
+/* Buttons */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: .5rem;
+  min-height: 48px; padding: .65rem 1.3rem; border-radius: var(--pv-radius-button);
+  font-size: .95rem; line-height: 1.5; font-weight: 600; text-decoration: none; white-space: nowrap; cursor: pointer;
+  border: 1px solid transparent;
+  transition: background-color var(--pv-transition), transform var(--pv-transition), box-shadow var(--pv-transition), color var(--pv-transition), border-color var(--pv-transition);
+}
+.btn:disabled { opacity: .55; cursor: not-allowed; transform: none !important; box-shadow: none !important; }
+.btn-sm { min-height: 40px; padding: .5rem 1rem; font-size: .9rem; }
+.btn-book, .btn-shop { background: var(--color-pv-yellow); color: var(--color-pv-deep); }
+.btn-book:hover, .btn-shop:hover { background: #f0c967; transform: translateY(-2px); box-shadow: 0 8px 20px rgb(23 76 69 / 12%); }
+.btn-secondary { background: var(--color-pv-green); color: #fff; border-color: var(--color-pv-green); }
+.btn-secondary:hover { background: var(--color-pv-deep); transform: translateY(-2px); }
+.btn-outline { background: #fff; color: var(--color-pv-deep); border-color: var(--color-pv-green); }
+.btn-outline:hover { background: var(--color-pv-green); color: #fff; }
+.btn-ghost { background: transparent; color: var(--color-pv-deep); }
+.btn-ghost:hover { background: rgb(47 107 87 / 8%); }
+.link-pv { color: var(--color-pv-deep); font-weight: 600; text-decoration: underline; text-underline-offset: 4px; text-decoration-color: var(--color-pv-yellow); text-decoration-thickness: 2px; transition: color var(--pv-transition); }
+.link-pv:hover { color: var(--color-pv-teal); }
+:focus-visible { outline: 3px solid var(--color-pv-teal); outline-offset: 3px; border-radius: 6px; }
+
+.card { background: #fff; border: 1px solid var(--color-pv-border); border-radius: var(--pv-radius-card); }
+.lift { transition: transform var(--pv-transition), box-shadow var(--pv-transition), border-color var(--pv-transition); }
+@media (hover: hover) {
+  .lift:hover { transform: translateY(-4px); box-shadow: 0 14px 35px rgb(23 76 69 / 9%); border-color: var(--color-pv-beige); }
+  .lift:hover .zoom-img { transform: scale(1.05); }
+  .product-card .reveal-btn { opacity: 0; transform: translateY(6px); }
+  .product-card:hover .reveal-btn, .product-card:focus-within .reveal-btn { opacity: 1; transform: none; }
+}
+.zoom-img { transition: transform 320ms var(--ease-pv); }
+.reveal-btn { transition: opacity var(--pv-transition), transform var(--pv-transition); }
+
+.input {
+  width: 100%; min-height: 48px; padding: .65rem .9rem; border-radius: 12px; background: #fff;
+  border: 1px solid var(--color-pv-border); color: var(--color-pv-text); transition: border-color var(--pv-transition), box-shadow var(--pv-transition);
+}
+.input:focus { outline: none; border-color: var(--color-pv-green); box-shadow: 0 0 0 3px rgb(47 107 87 / 15%); }
+.label { display: block; font-weight: 600; margin-bottom: .35rem; color: var(--color-pv-deep); font-size: .95rem; }
+
+.eyebrow { display: inline-flex; align-items: center; gap: .5rem; font-weight: 700; color: var(--color-pv-green); font-size: .9rem; }
+.eyebrow::before { content: ""; width: 26px; height: 3px; border-radius: 3px; background: var(--color-pv-yellow); }
+
+/* Motion */
+@keyframes fadeUp { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: none; } }
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes kenburns { from { transform: scale(1.0); } to { transform: scale(1.08); } }
+@keyframes wiggle { 0%, 100% { transform: rotate(0); } 50% { transform: rotate(-4deg) scale(1.05); } }
+@keyframes marquee { from { transform: translateX(0); } to { transform: translateX(50%); } }
+@keyframes toastIn { from { opacity: 0; transform: translateY(12px) scale(.98); } to { opacity: 1; transform: none; } }
+.anim-fade-up { animation: fadeUp 700ms var(--ease-pv) both; }
+.anim-fade-in { animation: fadeIn 900ms ease both; }
+.anim-kenburns { animation: kenburns 18s ease-out both alternate infinite; }
+.badge-pulse { animation: wiggle 2.8s ease-in-out infinite; }
+.marquee-track { animation: marquee 40s linear infinite; }
+.marquee:hover .marquee-track, .marquee[data-paused="true"] .marquee-track { animation-play-state: paused; }
+.reveal { opacity: 0; transform: translateY(22px); transition: opacity 600ms var(--ease-pv), transform 600ms var(--ease-pv); }
+.reveal.is-visible { opacity: 1; transform: none; }
+.step-enter { animation: fadeUp 350ms var(--ease-pv) both; }
+.toast { animation: toastIn 260ms var(--ease-pv) both; }
+
+.no-scrollbar { scrollbar-width: none; }
+.no-scrollbar::-webkit-scrollbar { display: none; }
+
+details > summary { list-style: none; cursor: pointer; }
+details > summary::-webkit-details-marker { display: none; }
+details .faq-icon { transition: transform 250ms var(--ease-pv); }
+details[open] .faq-icon { transform: rotate(45deg); }
+details .faq-body { animation: fadeUp 280ms var(--ease-pv) both; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; scroll-behavior: auto !important; }
+  .reveal { opacity: 1; transform: none; }
+}

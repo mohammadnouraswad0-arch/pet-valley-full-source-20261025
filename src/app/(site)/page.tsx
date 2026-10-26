@@ -21,7 +21,7 @@ export default async function Home() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "VeterinaryCare",
-    name: "Pet Valley Vet Clinic — عيادة بيت فالي البيطرية",
+    name: "Samaya Taiba Vet Clinic — عيادة سامايا طيبة البيطرية",
     sameAs: [s.instagram].filter(Boolean),
     ...(s.phone ? { telephone: s.phone } : {}),
   };
@@ -60,7 +60,7 @@ export default async function Home() {
       </section>
 
       {/* شريط الثقة */}
-      <section aria-label="لماذا بيت فالي" className="container-pv relative z-10 -mt-10">
+      <section aria-label="لماذا سامايا طيبة" className="container-pv relative z-10 -mt-10">
         <ul className="grid grid-cols-2 gap-px overflow-hidden rounded-3xl bg-pv-border shadow-[0_20px_50px_rgb(23_76_69/8%)] lg:grid-cols-4">
           {[
             [IconCalendar, "حجز إلكتروني حقيقي", "أوقات متاحة تُحسب فعليًا"],
@@ -93,7 +93,7 @@ export default async function Home() {
           <p className="eyebrow">من نحن</p>
           <h2 id="about-title" className="mt-2 text-3xl md:text-4xl">من نحن وماذا نقدم</h2>
           <p className="mt-5 text-lg leading-loose text-pv-text/85">
-            عيادة بيت فالي البيطرية تجمع لك الرعاية البيطرية والحجز الإلكتروني ومتجر المستلزمات في مكان واحد — لتجد ما يحتاجه حيوانك دون عناء.
+            عيادة سامايا طيبة البيطرية تجمع لك الرعاية البيطرية والحجز الإلكتروني ومتجر المستلزمات في مكان واحد — لتجد ما يحتاجه حيوانك دون عناء.
           </p>
           <ul className="mt-6 space-y-3">
             {["خدمات بيطرية أساسية: كشف، تطعيمات، فحوصات وعناية", "حجز إلكتروني بأوقات متاحة تُحسب فعليًا", "متجر مستلزمات بأسعار ومخزون واضح"].map((f) => (

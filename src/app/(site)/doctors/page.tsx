@@ -3,7 +3,7 @@ import { getDoctors } from "@/lib/data";
 import { DoctorCard, Notice, PageHeader } from "@/components/ui";
 import { Reveal } from "@/components/client-ui";
 
-export const metadata: Metadata = { title: "الأطباء", description: "تعرف على الفريق الطبي في عيادة بيت فالي البيطرية.", alternates: { canonical: "/doctors" } };
+export const metadata: Metadata = { title: "الأطباء", description: "تعرف على الفريق الطبي في عيادة سامايا طيبة البيطرية.", alternates: { canonical: "/doctors" } };
 
 export default async function DoctorsPage() {
   const doctors = await getDoctors();

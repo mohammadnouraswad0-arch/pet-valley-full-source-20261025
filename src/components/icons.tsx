@@ -36,15 +36,15 @@ export const IconTruck = ({ size, ...p }: P) => (<svg {...base(size)} {...p}><pa
 export const IconStore = ({ size, ...p }: P) => (<svg {...base(size)} {...p}><path d="M4 9.5 5.5 4h13L20 9.5" /><path d="M4 9.5h16V12a2.6 2.6 0 0 1-5.2 0A2.6 2.6 0 0 1 9.6 12 2.6 2.6 0 0 1 4 12v-2.5Z" /><path d="M5.5 14.5V20h13v-5.5" /><path d="M10 20v-4.5h4V20" /></svg>);
 
 export function Logo({ light = false }: { light?: boolean }) {
-  // Placeholder wordmark — replace with the official Pet Valley logo file once provided (keep original artwork).
+  // Placeholder wordmark — replace with the official Samaya Taiba logo file once provided (keep original artwork).
   return (
-    <span className="flex items-center gap-2.5" aria-label="Pet Valley Vet Clinic — عيادة بيت فالي البيطرية">
+    <span className="flex items-center gap-2.5" aria-label="Samaya Taiba Vet Clinic — عيادة سامايا طيبة البيطرية">
       <span className={`grid h-11 w-11 place-items-center rounded-2xl ${light ? "bg-white/15 text-pv-yellow" : "bg-pv-green text-pv-yellow"}`}>
         <IconPaw size={24} />
       </span>
       <span className="leading-tight">
-        <span className={`block text-[17px] font-extrabold ${light ? "text-white" : "text-pv-deep"}`}>بيت فالي</span>
-        <span className={`ltr block text-[11px] font-bold tracking-wide ${light ? "text-pv-pale" : "text-pv-green"}`}>PET VALLEY VET CLINIC</span>
+        <span className={`block text-[17px] font-extrabold ${light ? "text-white" : "text-pv-deep"}`}>سامايا طيبة</span>
+        <span className={`ltr block text-[11px] font-bold tracking-wide ${light ? "text-pv-pale" : "text-pv-green"}`}>SAMAYA TAIBA VET CLINIC</span>
       </span>
     </span>
   );

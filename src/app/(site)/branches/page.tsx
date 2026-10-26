@@ -5,7 +5,7 @@ import { HoursTable, Notice, PageHeader } from "@/components/ui";
 import { OpenNow } from "@/components/client-ui";
 import { IconPhone, IconPin } from "@/components/icons";
 
-export const metadata: Metadata = { title: "الفروع", description: "فروع عيادة بيت فالي البيطرية وساعات العمل.", alternates: { canonical: "/branches" } };
+export const metadata: Metadata = { title: "الفروع", description: "فروع عيادة سامايا طيبة البيطرية وساعات العمل.", alternates: { canonical: "/branches" } };
 
 export default async function BranchesPage() {
   const branches = await getBranches();

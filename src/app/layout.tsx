@@ -9,12 +9,12 @@ const SITE = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE),
-  title: { default: "عيادة بيت فالي البيطرية | Pet Valley Vet Clinic", template: "%s | بيت فالي البيطرية" },
-  description: "عيادة بيت فالي البيطرية: رعاية بيطرية، حجز مواعيد إلكتروني، ومتجر لمستلزمات الحيوانات الأليفة.",
-  openGraph: { type: "website", locale: "ar_SA", siteName: "Pet Valley Vet Clinic" },
+  title: { default: "عيادة سامايا طيبة البيطرية | Samaya Taiba Vet Clinic", template: "%s | سامايا طيبة البيطرية" },
+  description: "عيادة سامايا طيبة البيطرية: رعاية بيطرية، حجز مواعيد إلكتروني، ومتجر لمستلزمات الحيوانات الأليفة.",
+  openGraph: { type: "website", locale: "ar_SA", siteName: "Samaya Taiba Vet Clinic" },
 };
 
-export const viewport: Viewport = { themeColor: "#FAF7F0" };
+export const viewport: Viewport = { themeColor: "#FFF9F0" };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (

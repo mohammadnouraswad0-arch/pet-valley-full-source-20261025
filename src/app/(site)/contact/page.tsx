@@ -14,7 +14,9 @@ export default async function ContactPage() {
     s.phone && { icon: IconPhone, label: "الهاتف", value: s.phone, href: `tel:${s.phone}`, ltr: true },
     s.whatsapp && { icon: IconPhone, label: "واتساب", value: s.whatsapp, href: `https://wa.me/${s.whatsapp.replace(/\D/g, "")}`, ltr: true },
     s.email && { icon: IconPhone, label: "البريد الإلكتروني", value: s.email, href: `mailto:${s.email}`, ltr: true },
-    s.instagram && { icon: IconInstagram, label: "إنستغرام", value: "@pet.valley.clinic", href: s.instagram, ltr: true },
+    s.instagram && { icon: IconInstagram, label: "إنستغرام", value: "@samayataiba", href: s.instagram, ltr: true },
+    s.snapchat && { icon: IconInstagram, label: "سناب شات", value: "@samayataiba", href: s.snapchat, ltr: true },
+    s.tiktok && { icon: IconInstagram, label: "تيك توك", value: "@samayataiba", href: s.tiktok, ltr: true },
   ].filter(Boolean) as { icon: typeof IconPhone; label: string; value: string; href: string; ltr: boolean }[];
   return (
     <>
@@ -33,6 +35,7 @@ export default async function ContactPage() {
               <span><span className="block text-sm text-pv-muted">العنوان</span><span className="block font-bold text-pv-deep">{b.address}</span></span>
             </div>
           )}
+          {s.mapUrl && <a href={s.mapUrl} target="_blank" rel="noopener" className="btn btn-outline w-fit">فتح الموقع على الخريطة</a>}
           {(!s.phone || !s.whatsapp) && <Notice tone="warn">أرقام الهاتف وواتساب والبريد تُضاف من لوحة الإدارة بعد تأكيدها من العيادة.</Notice>}
           <div className="flex flex-wrap gap-3 pt-2">
             <Link href="/booking" className="btn btn-book">احجز موعدًا</Link>

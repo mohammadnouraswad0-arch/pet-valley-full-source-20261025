@@ -48,24 +48,20 @@ async function runSeed() {
       .insert(branches)
       .values({
         slug: "main",
-        name: "الفرع الرئيسي",
+        name: "Samaya Taiba",
         city: "",
-        address: "العنوان يُحدد من الإدارة",
+        address: "المدينة المنورة",
         timezone: "Asia/Riyadh",
-        hoursVerified: false,
-        infoVerified: false,
+        hoursVerified: true,
+        infoVerified: true,
       })
       .returning();
 
     // SAMPLE hours (development only; flagged hoursVerified=false and shown with a notice)
     const H = (h: number, m = 0) => h * 60 + m;
     const rows: { weekday: number; openMin: number; closeMin: number }[] = [];
-    for (const d of [0, 1, 2, 3, 4]) {
-      rows.push({ weekday: d, openMin: H(10), closeMin: H(14) });
-      rows.push({ weekday: d, openMin: H(17), closeMin: H(22) });
-    }
-    rows.push({ weekday: 6, openMin: H(10), closeMin: H(18) });
-    // Friday (5) closed in sample data
+    for (const d of [0, 1, 2, 3, 4, 6]) rows.push({ weekday: d, openMin: H(15), closeMin: H(23) });
+    rows.push({ weekday: 5, openMin: H(16), closeMin: H(22) });
     await tx.insert(branchHours).values(rows.map((r) => ({ ...r, branchId: branch.id })));
 
     const svc = await tx

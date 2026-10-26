@@ -24,15 +24,18 @@ export function Footer({ s, branch }: { s: SiteSettings; branch: BranchWithHours
       <div className="container-pv grid gap-12 py-16 lg:grid-cols-[1.2fr_2fr_1.3fr]">
         <div>
           <Logo light />
-          <p className="mt-5 max-w-sm leading-relaxed text-white/75">عيادة بيت فالي البيطرية — رعاية بيطرية ومتجر لمستلزمات الحيوانات الأليفة في مكان واحد.</p>
+          <p className="mt-5 max-w-sm leading-relaxed text-white/75">عيادة سامايا طيبة البيطرية — رعاية بيطرية ومتجر لمستلزمات الحيوانات الأليفة في مكان واحد.</p>
           <div className="mt-6 space-y-3 text-sm text-white/80">
             {branch?.address && <p className="flex items-start gap-2"><IconPin size={18} className="shrink-0 text-pv-yellow" /> {branch.address}</p>}
             {s.phone && <a href={`tel:${s.phone}`} className="ltr flex items-center gap-2 hover:text-pv-yellow"><IconPhone size={18} className="text-pv-yellow" /> {s.phone}</a>}
             {s.instagram && (
               <a href={s.instagram} target="_blank" rel="noopener" className="flex items-center gap-2 hover:text-pv-yellow">
-                <IconInstagram size={18} className="text-pv-yellow" /> <span className="ltr">@pet.valley.clinic</span>
+                <IconInstagram size={18} className="text-pv-yellow" /> <span className="ltr">Instagram: @samayataiba</span>
               </a>
             )}
+            {s.snapchat && <a href={s.snapchat} target="_blank" rel="noopener" className="flex items-center gap-2 hover:text-pv-yellow"><IconInstagram size={18} className="text-pv-yellow" /> <span className="ltr">Snapchat: @samayataiba</span></a>}
+            {s.tiktok && <a href={s.tiktok} target="_blank" rel="noopener" className="flex items-center gap-2 hover:text-pv-yellow"><IconInstagram size={18} className="text-pv-yellow" /> <span className="ltr">TikTok: @samayataiba</span></a>}
+            {s.mapUrl && <a href={s.mapUrl} target="_blank" rel="noopener" className="flex items-center gap-2 hover:text-pv-yellow"><IconPin size={18} className="text-pv-yellow" /> <span>الموقع على الخريطة</span></a>}
           </div>
         </div>
         <div className="grid grid-cols-2 gap-8 sm:grid-cols-3">
@@ -60,7 +63,7 @@ export function Footer({ s, branch }: { s: SiteSettings; branch: BranchWithHours
       </div>
       <div className="border-t border-white/10">
         <div className="container-pv flex flex-col items-center justify-between gap-2 py-5 text-xs text-white/60 sm:flex-row">
-          <p>© {new Date().getFullYear()} Pet Valley Vet Clinic — عيادة بيت فالي البيطرية</p>
+          <p>© {new Date().getFullYear()} Samaya Taiba Vet Clinic — عيادة سامايا طيبة البيطرية</p>
           <p>الصور الفوتوغرافية من Pexels بترخيص يسمح بالاستخدام التجاري، وتُستبدل بالصور الرسمية للعيادة.</p>
         </div>
       </div>

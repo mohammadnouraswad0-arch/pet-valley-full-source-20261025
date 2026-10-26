@@ -7,7 +7,7 @@ import { ProductCard, Rail, Reveal } from "@/components/client-ui";
 import { SectionTitle } from "@/components/ui";
 import { IconArrow, IconBag, IconCalendar, IconPaw, IconShield, IconTruck } from "@/components/icons";
 
-export const metadata: Metadata = { title: "المتجر", description: "متجر بيت فالي: طعام، عناية، ألعاب وإكسسوارات للقطط والكلاب.", alternates: { canonical: "/shop" } };
+export const metadata: Metadata = { title: "المتجر", description: "متجر سامايا طيبة: طعام، عناية، ألعاب وإكسسوارات للقطط والكلاب.", alternates: { canonical: "/shop" } };
 
 export default async function ShopPage({ searchParams }: { searchParams: Promise<SP> }) {
   const sp = await searchParams;

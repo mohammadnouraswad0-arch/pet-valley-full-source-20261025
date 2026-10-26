@@ -4,7 +4,7 @@ import { getServices } from "@/lib/data";
 import { PageHeader, ServiceCard } from "@/components/ui";
 import { Reveal } from "@/components/client-ui";
 
-export const metadata: Metadata = { title: "الخدمات", description: "خدمات عيادة بيت فالي البيطرية: الكشف، التطعيمات، الفحوصات، العمليات والعناية.", alternates: { canonical: "/services" } };
+export const metadata: Metadata = { title: "الخدمات", description: "خدمات عيادة سامايا طيبة البيطرية: الكشف، التطعيمات، الفحوصات، العمليات والعناية.", alternates: { canonical: "/services" } };
 
 export default async function ServicesPage() {
   const services = await getServices();

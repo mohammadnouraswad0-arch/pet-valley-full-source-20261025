@@ -14,7 +14,7 @@ export default async function LoginPage() {
     <main className="grid min-h-screen place-items-center bg-pv-cream p-6">
       <div className="card w-full max-w-md p-8 shadow-xl">
         <Logo />
-        <h1 className="mt-6 text-2xl">لوحة إدارة بيت فالي</h1>
+        <h1 className="mt-6 text-2xl">لوحة إدارة سامايا طيبة</h1>
         <p className="mt-1 text-sm text-pv-muted">للموظفين المخولين فقط.</p>
         <ActionForm action={login} className="mt-6 space-y-4" submit="دخول">
           <div>

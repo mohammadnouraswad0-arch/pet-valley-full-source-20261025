@@ -4,12 +4,12 @@ import { PageHeader } from "@/components/ui";
 import { Reveal } from "@/components/client-ui";
 import { IconHeart, IconShield, IconStetho } from "@/components/icons";
 
-export const metadata: Metadata = { title: "من نحن", description: "تعرف على عيادة بيت فالي البيطرية وقيمها في رعاية الحيوانات الأليفة.", alternates: { canonical: "/about" } };
+export const metadata: Metadata = { title: "من نحن", description: "تعرف على عيادة سامايا طيبة البيطرية وقيمها في رعاية الحيوانات الأليفة.", alternates: { canonical: "/about" } };
 
 export default function AboutPage() {
   return (
     <>
-      <PageHeader title="من نحن" subtitle="عيادة بيت فالي البيطرية — رعاية بيطرية ومتجر لمستلزمات الحيوانات الأليفة تحت سقف واحد." crumbs={[{ label: "من نحن" }]} />
+      <PageHeader title="من نحن" subtitle="عيادة سامايا طيبة البيطرية — رعاية بيطرية ومتجر لمستلزمات الحيوانات الأليفة تحت سقف واحد." crumbs={[{ label: "من نحن" }]} />
       <section className="container-pv grid items-center gap-12 py-16 lg:grid-cols-2">
         <Reveal>
           <div className="grid grid-cols-2 gap-4">
@@ -23,7 +23,7 @@ export default function AboutPage() {
           <p className="eyebrow">قصتنا</p>
           <h2 className="mt-2 text-3xl md:text-4xl">رعاية تبدأ من فهم حيوانك</h2>
           <p className="mt-5 text-lg leading-loose text-pv-text/85">
-            نؤمن في بيت فالي بأن كل زيارة للعيادة يجب أن تكون تجربة هادئة وواضحة لك ولحيوانك. لذلك جمعنا الخدمات البيطرية الأساسية والحجز الإلكتروني ومتجر المستلزمات في مكان واحد، لتجد ما تحتاجه دون عناء.
+            نؤمن في سامايا طيبة بأن كل زيارة للعيادة يجب أن تكون تجربة هادئة وواضحة لك ولحيوانك. لذلك جمعنا الخدمات البيطرية الأساسية والحجز الإلكتروني ومتجر المستلزمات في مكان واحد، لتجد ما تحتاجه دون عناء.
           </p>
           <p className="mt-4 text-sm text-pv-muted">* تُستكمل قصة العيادة وتاريخها وأرقامها الرسمية بعد اعتماد المحتوى من الإدارة.</p>
           <div className="mt-8 flex flex-wrap gap-3">

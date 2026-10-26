@@ -3,7 +3,7 @@ import { getBranches, getDoctors, getServices } from "@/lib/data";
 import { PageHeader, Notice } from "@/components/ui";
 import { BookingWizard } from "@/components/booking-wizard";
 
-export const metadata: Metadata = { title: "احجز موعدًا", description: "احجز موعدك في عيادة بيت فالي البيطرية إلكترونيًا واختر الوقت المتاح.", alternates: { canonical: "/booking" } };
+export const metadata: Metadata = { title: "احجز موعدًا", description: "احجز موعدك في عيادة سامايا طيبة البيطرية إلكترونيًا واختر الوقت المتاح.", alternates: { canonical: "/booking" } };
 
 export default async function BookingPage({ searchParams }: { searchParams: Promise<{ service?: string; doctor?: string }> }) {
   const sp = await searchParams;
